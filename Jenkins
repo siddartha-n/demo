@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Deploy Html Report') {
+            steps {
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, icon: '', keepAll: false, reportDir: '', reportFiles: '!DOCTYPE.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+            }
+        }
+    }
+}
